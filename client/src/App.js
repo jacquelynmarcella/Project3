@@ -87,7 +87,7 @@ class App extends Component {
           <Router>
             <div>
               <Nav user={this.state.user} updateUser={this.getUser} />
-              <div className="space">
+               <div className="space">
                 <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />
               
                 <Route exact path="/" component={Home} />
@@ -103,7 +103,8 @@ class App extends Component {
                 <Route path="/analyze" component={
                   () => (<Analyze user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
                 <Route path="/log" component={
-                  () => (<DreamLog user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
+                  () => (<DreamLog user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />     
+                <Footer />
               </div>
             </div>
           </Router>
